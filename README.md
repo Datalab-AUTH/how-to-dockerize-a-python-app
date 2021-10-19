@@ -68,6 +68,12 @@ named `Dockerfile`. See the respective file in this repo. You can edit
 the python version used and also edit the app name to match your own app
 of course.
 
+Also create a `.dockerignore` file and add at least the `venv` and
+`.git` directories in it along with anything else you might not want to
+include in the docker container. This will speed up the build process
+and also make the container image smaller. See the respective file in
+this repo.
+
 If there is a build step in your app, append it to the `RUN` command.
 Here's an example:
 ```
